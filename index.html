@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCCC , MMCT</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    img {
+      display: inline
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Header -->
+  <!-- 
+<header class="text-gray-600 body-font bg-indigo-300">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img src="./assets/Header/uclogo.png" class="w-12 h-15  p-2  rounded-full">
+        
+ 
+        <span class="ml-3 text-4xl">UCCC - MMCT</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <img src="./assets/Icons/icons8-dashboard-layout-24.png" class="w-6 h-6"> &nbsp; <a href="#dashboards" class="mr-5 hover:text-indigo-500 font-bold"> Dashboards</a>
+        <img src="./assets/Icons/icons8-photo-gallery-24.png" class="w-6 h-6"> &nbsp; <a href="#photo-gallery" class="mr-5 hover:text-indigo-500 font-bold">Photo Gallery</a>
+        <img src="./assets/Icons/icons8-quote-24.png" class="w-6 h-6"> &nbsp; <a href="#Testimonials" class="mr-5 hover:text-indigo-500 font-bold">Testimonials</a>
+        <img src="./assets/Icons/icons8-megaphone-24.png" class="w-6 h-6"> &nbsp; <a href="#mediacoverage" class="mr-5 hover:text-indigo-500 font-bold">Media Coverage</a>
+        <img src="./assets/Icons/icons8-birthday-cake-24.png" class="w-6 h-6"> &nbsp; <a href="#culture" class="mr-5 hover:text-indigo-500 font-bold">Cultural & Activity</a>
+        <img src="./assets/Icons/icons8-management-24.png" class="w-6 h-6"> &nbsp; <a href="#ourteam" class="mr-5 hover:text-indigo-500 font-bold">Our Team</a>
+
+      </nav>
+     
+    </div>
+  </header>
+</div> -->
+
+  <!-- component -->
+  <div id="top">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <div class="w-full text-gray-700 bg-indigo-300  dark-mode:bg-gray-800">
+      <div x-data="{ open: false }"
+        class="flex flex-col max-w-screen-2xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+        <div class="p-4 flex flex-row items-center justify-between ">
+          <a href="#"
+            class="text-3xl font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
+            <div class="flex-row"><img src="./assets/Header/uclogo.png" class="w-12 h-15  p-2  rounded-full">UCCC-MMCT
+            </div>
+          </a>
+          <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path x-show="!open" fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+              <path x-show="open" fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <nav :class="{'flex': open, 'hidden': !open}"
+          class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+
+          <a class="px-4 py-2 mt-2 mr-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-2xl  md:mt-0 hover:text-indigo-600 focus:text-indigo-600 hover:bg-indigo-200"
+            href="#dashboards"><img src="./assets/Icons/icons8-dashboard-layout-24.png" class="w-4 h-4">&nbsp;
+            Dashboard</a>
+
+          <a class="px-4 py-2 mt-2  mr-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-2xl  md:mt-0 hover:text-indigo-600 focus:text-indigo-600 hover:bg-indigo-200"
+            href="#photo-gallery"><img src="./assets/Icons/icons8-photo-gallery-24.png" class="w-4 h-4">&nbsp; Photo
+            Gallery</a>
+
+          <a class="px-4 py-2 mt-2  mr-2  text-sm font-semibold text-gray-900 bg-gray-200 rounded-2xl  md:mt-0 hover:text-indigo-600 focus:text-indigo-600 hover:bg-indigo-200"
+            href="#Testimonials"><img src="./assets/Icons/icons8-quote-24.png" class="w-4 h-4">&nbsp; Testimonials</a>
+
+          <a class="px-4 py-2 mt-2  mr-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-2xl  md:mt-0 hover:text-indigo-600 focus:text-indigo-600 hover:bg-indigo-200"
+            href="#mediacoverage"><img src="./assets/Icons/icons8-megaphone-24.png" class="w-4 h-4">&nbsp; Media
+            Coverage</a>
+
+          <a class="px-4 py-2 mt-2  mr-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-2xl  md:mt-0 hover:text-indigo-600 focus:text-indigo-600 hover:bg-indigo-200"
+            href="#culture"><img src="./assets/Icons/icons8-birthday-cake-24.png" class="w-4 h-4">&nbsp; Cultural Activity</a>
+
+          <a class="px-4 py-2 mt-2  mr-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-2xl  md:mt-0 hover:text-indigo-600 focus:text-indigo-600 hover:bg-indigo-200"
+            href="#ourteam"><img src="./assets/Icons/icons8-management-24.png" class="w-4 h-4">&nbsp; Our Team</a>
+
+          <a class="px-4 py-2 mt-2  mr-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-2xl  md:mt-0 hover:text-indigo-600 focus:text-indigo-600 hover:bg-indigo-200"
+            href="#contact"><img src="./assets/Icons/contact.png" class="w-4 h-4">&nbsp; Contact Us</a>
+
+
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- Header Ends  -->
+
+  <!-- Hero Area-->
+
+  <section class="text-gray-600 body-font bg-white">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div
+        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex-none flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-indigo-600">Unified Command and Control Centre
+          <br class="hidden lg:inline-block"><span class="text-indigo-600">Mumbai Division</span>
+        </h1>
+        <p class="mb-8 leading-relaxed text-justify text-black">
+          Unified Command and Control Centre at
+          Mumbai Division of Western Railway.It
+          integrates information systems of all functions
+          (Freight, Coaching, Commercial, Infra,
+          Finance, HR, Procurement Medical, S&T,
+          Engineering) of the Railways for optimal
+          performance, including VA and FRS for the
+          2700+ CCTV network across the Mumbai
+          Suburban as well.
+        </p>
+        <p class="mb-8 leading-relaxed text-justify text-black">
+          The Unified Command and
+          Control Centre (UCCC) was inaugurated by
+          Shri. Suneet Sharma
+          Chairman & CEO, Railway Board on his recent
+          review visit to Western Railway on 7th
+          November, 2021. Shri Suneet Sharma was
+          very much impressed with the UCCC and was
+          full of praise for this advanced technology.
+        </p>
+
+        <!--<div class="flex justify-center">
+          <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+          <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+        </div>-->
+      </div>
+      <div class="lg:max-w-8xl flex-grow md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded-lg shadow-2xl" alt="hero" src="./assets/slide.JPG">
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Area ends here-->
+
+
+  <!-- Content -->
+  <div id="dashboards">
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap w-full mb-20">
+          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Dashboards</h1>
+            <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+          </div>
+          <p class="lg:w-1/2 w-full leading-relaxed text-gray-500 text-justify text-black">Business dashboards are the
+            digital age tools for big data. Capable of displaying key performance indicators (KPIs) for both
+            quantitative and
+            qualitative data analyses, they are ideal for making the fast-paced and data driven market decisions that
+            push today’s industry leaders to sustainable success. Through the art of streamlined visual communication,
+            dashboards permit businesses to engage in real-time and informed decision making, and are key instruments in
+            data interpretation.</p>
+        </div>
+        <div class="flex flex-wrap -m-4 ">
+          <div class="xl:w-1/4 md:w-1/2 p-4 ">
+            <a href="https://datastudio.google.com/reporting/e4271092-0f93-47b6-8c5c-f86e0eb21101/page/p_7o5er6xnoc">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img
+                  class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900 border-1 border-black"
+                  src="./assets/Uc dashboards/Engg.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Engineering Department</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/a015a75c-ddf7-47bc-a532-6f75a313ec92/page/p_yb473m9dmc">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/St.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">S & T Department</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/845da75d-ed25-4cc0-99b3-33555e1b02c5/page/E0xSC">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/BL loco9.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Electric Loco Shed - Valsad
+                </h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/1172ea96-2e9a-4124-8506-a6416419ba71/page/p_jqrzfr4omc">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/EC.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Electrical Coaching</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+        </div>
+
+        <div class="flex flex-wrap -m-4">
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/312d86ba-3255-450a-868e-3d7a5087a05c/page/p_k5jzo0uwmc">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/electric.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">TRD - MMCT</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/4e3175e0-4618-430d-9244-17f572fa84b3/page/6U1XC">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/elpow.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Electrical Power</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/d87fc113-130a-4647-8971-fb8f5f997757/page/p_9yr7mrc9nc">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/mec.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Mechanical Department</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/e4584df9-0504-4dbc-8a06-094b07d59f09/page/p_g9f2ua0emc">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/Emu.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Electric Multiple Unit (EMU)
+                </h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+        </div>
+
+        <div class="flex flex-wrap -m-4">
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/ddd95f43-904d-4d6f-b5e4-118fcca0b57c/page/p_lembgqq1mc">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/tro.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Traction Operation</h2>
+                <p class="leading-relaxed text-basetext-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/349530f9-5317-4d24-b0ee-a24961ff06b2/page/p_q7n2d0v8lc">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/optg.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Traffic Department</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/bedeab31-5c91-46d6-9ea7-ae1255372d4e/page/p_4zdeyidtoc">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/finance.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Finance Department</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/68fd620d-a817-4fac-a315-28d7b03f9a43/page/qutEC">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/Personal.png" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Personal Department</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+        </div>
+
+        <div class="flex flex-wrap -m-4">
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/a97e4ec9-f218-40ac-a7b3-66d0cd73e777/page/p_0ur434kpmc">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/safety.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Safety Department</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/26b6a09d-7118-4900-a19e-35d3a1e8024c/page/p_rjwqbycgmc">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/Comm.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Commercial Department</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/3385b66e-b042-4ff1-ae2a-20635893fd73/page/p_e7tv3uktmc">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/medical.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Medical Department</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/c9a188e3-7ffb-44fc-84dd-155355b171a4/page/v30KC">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/vaccine.jpg" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Vaccine</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+        </div>
+
+        <div class="flex flex-wrap -m-4">
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/9f7335ec-daa5-44c9-9e37-54cd8e988de1/page/QTJIC">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/Rail_Madad.jpg" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Rail Madad</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/dfecf587-fdb5-47e0-af30-f9f278e783e9/page/TVuWC">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/ICMS.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">ICMS</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/8823cfc5-1e66-4e29-a98b-7209dd4e762c/page/p_6dnwehr8oc">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/Stores.png" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Stores Department</h2>
+                <p class="leading-relaxed text-base text-justify text-black"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/565828ec-e345-4557-9a2f-85f6f6806505/page/p_hg5pb1i4mc">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/RPF.png" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Security</h2>
+                <p class="leading-relaxed text-base "></p>
+              </div>
+          </div></a>
+        </div>
+
+        <div class="flex flex-wrap -m-4">
+
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/b383d496-3e7c-4d82-8e32-d607b4044414/page/wbg9B">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/jrh.jpg" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Jagjivanram Hospital OPD</h2>
+                <p class="leading-relaxed text-base"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/a9e3c138-c72c-4352-960e-85716ed2671a/page/29tsB">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/coms.jpg" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Colony Management System</h2>
+                <p class="leading-relaxed text-base"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/b383d496-3e7c-4d82-8e32-d607b4044414/page/VU68B">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/inspe.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Officer's Inspection</h2>
+                <p class="leading-relaxed text-base"></p>
+              </div>
+          </div></a>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <a href="https://datastudio.google.com/reporting/b383d496-3e7c-4d82-8e32-d607b4044414/page/7e58B">
+              <div class="bg-gray-50 shadow-2xl p-2 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6 border-2 border-indigo-900"
+                  src="./assets/Uc dashboards/deffi.PNG" alt="content">
+
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4 text-center">Deficiency Monitoring</h2>
+                <p class="leading-relaxed text-base"></p>
+              </div>
+          </div></a>
+        </div>
+
+
+
+
+      </div>
+    </section>
+  </div>
+  <!-- Content closed -->
+
+
+  <!-- Photo Gallery -->
+  <div id="photo-gallery" class="bg-white">
+
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">UCCC Gallery</h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-justify">It is collection of all the photos and
+            events at the office. All the visitors and chief guest can be seen in the gallery section of this website.It
+            enhance our belief in the productivity by seeing this guest as motivation</p>
+        </div>
+        <div class="flex flex-wrap -m-4">
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative shadow-2xl">
+              <img alt="gallery"
+                class="absolute inset-0 w-full h-full object-cover object-center border-2 border-indigo-900"
+                src="./assets/gallary/gallary1.jpeg">
+              <div
+                class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"></h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Inauguration by CRB</h1>
+                <p class="leading-relaxed text-justify">Entire IT team along with CRB, GM/WR & DRM/MMCT at the event of
+                  launch of UCCC.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative shadow-2xl">
+              <img alt="gallery"
+                class="absolute inset-0 w-full h-full object-cover object-center border-2 border-indigo-900"
+                src="./assets/gallary/gallary2.jpg">
+              <div
+                class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"></h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Video Wall</h1>
+                <p class="leading-relaxed text-justify">UCCC has 18 large screen walls mounted for different functions.
+                  It can be clubbed for ISS, Dashboards etc.</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative shadow-2xl">
+              <img alt="gallery"
+                class="absolute inset-0 w-full h-full object-cover object-center border-2 border-indigo-900"
+                src="./assets/gallary/gallery33.jpg">
+              <div
+                class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"></h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Meditation Room</h1>
+                <p class="leading-relaxed text-justify">It's the idea of DRM/MMCT to host a meditation room to relax
+                  mentally. It will boost performance and solve complex problem</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative shadow-2xl">
+              <img alt="gallery"
+                class="absolute inset-0 w-full h-full object-cover object-center border-2 border-indigo-900"
+                src="./assets/gallary/gallery4.JPG">
+              <div
+                class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"></h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Visit by Chief Manager IT KRCL</h1>
+                <p class="leading-relaxedtext-justify">Mrs.Bindu along with her colleague visited UCCC and she was all
+                  praise for UCCC and team</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative shadow-2xl">
+              <img alt="gallery"
+                class="absolute inset-0 w-full h-full object-cover object-center border-2 border-indigo-900"
+                src="./assets/gallary/gallery5.JPG">
+              <div
+                class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"></h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">ECR team Visit</h1>
+                <p class="leading-relaxed text-justify">Team of Sr.DCM along with SPT , ADSTE and XEN visited UCCC
+                  Dt.16-17/11/2021</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 sm:w-1/2 p-4">
+            <div class="flex relative shadow-2xl">
+              <img alt="gallery"
+                class="absolute inset-0 w-full h-full object-cover object-center border-2 border-indigo-900"
+                src="./assets/gallary/gallery6.JPG">
+              <div
+                class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1"></h2>
+                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">SECR key person visit</h1>
+                <p class="leading-relaxed text-justify">Dy. CM IT (Secretary to AGM/D SECR) visited UCCC
+                  Dt.16-17/11/2021.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- End of Photo Gallery -->
+
+
+  <!-- Testimonial -->
+  <div id="Testimonials">
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-12 mx-auto">
+        <h1 class="text-3xl font-medium title-font text-gray-900 mb-6 text-center">Testimonials</h1>
+        <div class="flex flex-wrap -m-3">
+
+
+
+          <div class="p-4 md:w-1/2 w-full">
+            <div class="h-full bg-gray-100 p-8 rounded">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                class="block w-6 h-6 te&nbsp; xt-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                <path
+                  d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+                </path>
+              </svg>
+              <p class="leading-relaxed mb-6 text-justify text-black">A wonderfully designed dashboard of all Railway
+                functions with visual representations of various data, providing valuable analytical inputs and
+                information for decisions making at many levels. A small but highly motivated team of Railwaymen who
+                have taken excellent efforts to learn new technology .</p>
+              <a class="inline-flex items-center">
+                <img alt="testimonial" src="./assets/gallary/gallery4.JPG"
+                  class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                <span class="flex-grow flex flex-col pl-4">
+                  <span class="title-font font-medium text-gray-900">Mrs. Bindu Muralidharan</span>
+                  <span class="text-gray-500 text-sm">Chief Manager IT , KRCL</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-4 md:w-1/2 w-full">
+            <div class="h-full bg-gray-100 p-8 rounded">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                class="block w-6 h-6 te&nbsp; xt-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                <path
+                  d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+                </path>
+              </svg>
+              <p class="leading-relaxed mb-6 text-justify text-black">It was pleasure to be here at UCCC. The way
+                various forms of data, input and other parameter have amazingly been analysed and composed. Knowing
+                these to have been designed / conceptualized and build in-house is just amazing.Wish MMCT the best in
+                their future
+                endeavours. </p>
+              <a class="inline-flex items-center">
+                <img alt="testimonial" src="./assets/gallary/gallery5.JPG"
+                  class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                <span class="flex-grow flex flex-col pl-4">
+                  <span class="title-font font-medium text-gray-900">Shri. Prasanna Kotyayan</span>
+                  <span class="text-gray-500 text-sm">Sr.DCM TC SPJ - ECR</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Testimonial ends here-->
+
+  <!-- Media Coverage -->
+
+  <div id="mediacoverage">
+    <div class="bg-white pb-20">
+      <div class="flex flex-col text-center w-full">
+        <h1 class="text-3xl font-medium title-font text-gray-900 mt-12 mb-12 text-center">Media Coverage</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Various Newspaper such as Navbharat Times, Bharat Samvad
+          covered the UCCC inauguration extensively. Not only newspaper but social handles of WR officially covered the
+          news of UCCC on their Twitter and Facebook page. Following are the glimpse of the coverage.</p>
+      </div>
+
+      <div class="mt-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8 ">
+        <div class="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden border-2 border-indigo-900 lg:block">
+          <img src="./assets/uc media/media6.jpg" alt="Two each of gray, white, and black shirts laying flat."
+            class="w-full h-full object-center object-cover">
+        </div>
+        <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+          <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden border-2 border-indigo-900">
+            <img src="./assets/uc media/media1.jpeg" alt="Model wearing plain black basic tee."
+              class="w-full h-full object-center object-cover">
+          </div>
+          <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden border-2 border-indigo-900">
+            <img src="./assets/uc media/media2.jpg" alt="Model wearing plain gray basic tee."
+              class="w-full h-full object-center object-cover">
+          </div>
+        </div>
+        <div
+          class="aspect-w-4 aspect-h-5 sm:rounded-lg sm:overflow-hidden border-2 border-indigo-900 lg:aspect-w-3 lg:aspect-h-4">
+          <img src="./assets/uc media/media5.jpeg" alt="Model wearing plain white basic tee."
+            class="w-full h-full object-center object-cover">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Medial Coverage ends here -->
+
+
+
+  <!-- Cultural Activity -->
+  <div id="culture">
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col">
+          <div class="h-1 bg-gray-200 rounded overflow-hidden">
+            <div class="w-24 h-full bg-indigo-500"></div>
+          </div>
+          <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+            <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Cultural Activities &
+              Celebrations</h1>
+            <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">We at UCCC believe in celebration of different
+              cultures and ethics so that we have harmony in our team and team remains cheerful all the way.</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+          <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+            <div class="rounded-lg h-64 overflow-hidden">
+              <img alt="content" class="object-cover object-center h-full w-full"
+                src="./assets/uc cultural/drmbirthday.jpg">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">DRM's Birthday</h2>
+            <p class="text-base leading-relaxed mt-2">The biggest motivation to our team is DRM/MMCT. His birthday was
+              made special by team.</p>
+            <!--<a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>-->
+          </div>
+          <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+            <div class="rounded-lg h-64 overflow-hidden">
+              <img alt="content" class="object-cover object-center h-full w-full"
+                src="./assets/uc cultural/diwali30.jpg">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Diwali Celebration</h2>
+            <p class="text-base leading-relaxed mt-2">UCCC team celebrated diwali 2021 with zeal and enthusiasm.Bless
+              everyone happy diwali!</p>
+            <!--<a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>-->
+          </div>
+          <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+            <div class="rounded-lg h-64 overflow-hidden">
+              <img alt="content" class="object-cover object-center h-full w-full"
+                src="./assets/uc cultural/diwali5.jpg">
+            </div>
+            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Lakshmi Pujan 2021</h2>
+            <p class="text-base leading-relaxed mt-2">Team was delighted to perfom Lakshmi pujan at the eve of diwali ,
+              praying for prosperity</p>
+            <!--<a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>-->
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Activity ends here -->
+
+
+  <!-- contact form from here -->
+  <div id="contact" class="bg-white">
+  <section class="text-gray-600 body-font relative ">
+    <div class="container px-50 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-12">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
+        
+      </div>
+      <div class="lg:w-1/2 md:w-2/3 mx-auto  p-2 rounded-2xl border-2 border-indigo-900">
+        <div class="flex flex-wrap -m-2 ">
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="name" class="leading-7 text-lg text-gray-600">Name</label>
+              <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="email" class="leading-7 text-lg text-gray-600">Email</label>
+              <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <div class="relative">
+              <label for="message" class="leading-7 text-lg text-gray-600">Message</label>
+              <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-2 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
+          </div>
+          <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+           
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-4 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-4 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-4 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+  <!-- contact form till here -->
+
+  <!-- Our Team -->
+  <div id="ourteam" class="bg-gray-200">
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+          <h1 class="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">OUR TEAM</h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Teamwork is the ability to work together toward a common
+            vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel
+            that allows common people to attain uncommon results</p>
+        </div>
+        <div class="flex flex-wrap -m-4">
+          <div class="p-4 lg:w-1/2">
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+              <img alt="team" class="flex-shrink-0 rounded-lg w-49 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="./assets/uc team/iyer.jpeg">
+              <div class="flex-grow sm:pl-8">
+                <h2 class="title-font font-medium text-lg text-gray-900">Shri P.R.Shivaram Iyer</h2>
+                <h3 class="text-gray-500 mb-3">Team Lead <br> </h3>
+                <p class="mb-4">.</p>
+                <span class="inline-flex">
+                  <a href="https://facebook.com/rameshiy" class="text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a href="https://twitter.com/rameshiy" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://instagram.com/rameshiy" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a href="https://linkedin.com" class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="0" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 lg:w-1/2">
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+              <img alt="team" class="flex-shrink-0 rounded-lg w-49 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="./assets/uc team/Binay.jpeg">
+              <div class="flex-grow sm:pl-8">
+                <h2 class="title-font font-medium text-lg text-gray-900">Shri Binay Kumar Shrivastava</h2>
+                <h3 class="text-gray-500 mb-3">Dashboard Developer</h3>
+                <p class="mb-4">.</p>
+                <span class="inline-flex">
+                  <a href="https://facebook.com" class="text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a href="https://twitter.com" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://instagram.com" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a href="https://linkedin.com" class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="0" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 lg:w-1/2">
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+              <img alt="team" class="flex-shrink-0 rounded-lg w-49 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="./assets/uc team/ganesh.jpg">
+              <div class="flex-grow sm:pl-8">
+                <h2 class="title-font font-medium text-lg text-gray-900">Shri Ganesh Palve</h2>
+                <h3 class="text-gray-500 mb-3">Application Developer</h3>
+                <p class="mb-4">.</p>
+                <span class="inline-flex">
+                  <a href="https://facebook.com" class="text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a href="https://twitter.com/gpalve9" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://instagram.com/ganesh_palve92" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a href="https://linkedin.com" class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="0" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="p-4 lg:w-1/2">
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+              <img alt="team" class="flex-shrink-0 rounded-lg w-49 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="./assets/uc team/Narayanan.jpg">
+              <div class="flex-grow sm:pl-8">
+                <h2 class="title-font font-medium text-lg text-gray-900">Shri S Narayanan</h2>
+                <h3 class="text-gray-500 mb-3">Network Administrator</h3>
+                <p class="mb-4">.</p>
+                <span class="inline-flex">
+                  <a href="https://facebook.com/narayanan.sankaran.56" class="text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a href="https://twitter.com" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://instagram.com" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a href="https://linkedin.com" class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="0" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 lg:w-1/2">
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+              <img alt="team" class="flex-shrink-0 rounded-lg w-49 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="./assets/uc team/RDS1.jpeg">
+              <div class="flex-grow sm:pl-8">
+                <h2 class="title-font font-medium text-lg text-gray-900">Shri R.D.Shrivastava</h2>
+                <h3 class="text-gray-500 mb-3">VB Developer</h3>
+                <p class="mb-4">.</p>
+                <span class="inline-flex">
+                  <a href="https://facebook.com" class="text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a href="https://twitter.com" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://instagram.com" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a href="https://linkedin.com" class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="0" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 lg:w-1/2">
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+              <img alt="team" class="flex-shrink-0 rounded-lg w-49 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="./assets/uc team/Hakim Khan.jpeg">
+              <div class="flex-grow sm:pl-8">
+                <h2 class="title-font font-medium text-lg text-gray-900">Shri Hakim Mansury</h2>
+                <h3 class="text-gray-500 mb-3">Dashboard Developer</h3>
+                <p class="mb-4">.</p>
+                <span class="inline-flex">
+                  <a href="https://facebook.com" class="text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a href="https://twitter.com" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://instagram.com" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a href="https://linkedin.com" class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="0" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 lg:w-1/2">
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+              <img alt="team" class="flex-shrink-0 rounded-lg w-49 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="./assets/uc team/Krutika.jpeg">
+              <div class="flex-grow sm:pl-8">
+                <h2 class="title-font font-medium text-lg text-gray-900">Miss. Krutika Raut</h2>
+                <h3 class="text-gray-500 mb-3">Dashboard Developer</h3>
+                <p class="mb-4">.</p>
+                <span class="inline-flex">
+                  <a href="https://facebook.com" class="text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a href="https://twitter.com" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://instagram.com" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a href="https://linkedin.com" class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="0" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 lg:w-1/2">
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+              <img alt="team" class="flex-shrink-0 rounded-lg w-49 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="./assets/uc team/ketan.jpg">
+              <div class="flex-grow sm:pl-8">
+                <h2 class="title-font font-medium text-lg text-gray-900">Shri Ketan Naik</h2>
+                <h3 class="text-gray-500 mb-3">Dashboard Developer</h3>
+                <p class="mb-4">.</p>
+                <span class="inline-flex">
+                  <a href="https://facebook.com" class="text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a href="https://twitter.com" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path
+                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a href="https://instagram.com" class="ml-3 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a href="https://linkedin.com" class="ml-3 text-gray-500">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="0" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                      <path stroke="none"
+                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                      <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 lg:w-1/2">
+            <div
+              class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+              <img alt="team" class="flex-shrink-0 rounded-lg w-49 h-48 object-cover object-center sm:mb-0 mb-4"
+                src="./assets/uc team/Himmat singh.jpeg"">
+            <div class=" flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-gray-900">Shri Himmat Singh Rathore</h2>
+              <h3 class="text-gray-500 mb-3">Application Developer</h3>
+              <p class="mb-4">.</p>
+              <span class="inline-flex">
+                <a href="https://facebook.com/himmsrathore" class="text-gray-500">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a href="https://twitter.com/himmsrathore" class="ml-3 text-gray-500">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="https://instagram.com/himmsrathore" class="ml-3 text-gray-500">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                  </svg>
+                </a>
+                <a href="https://linkedin.com" class="ml-3 text-gray-500">
+                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="0" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <path stroke="none"
+                      d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 lg:w-1/2">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-49 h-48 object-cover object-center sm:mb-0 mb-4"
+              src="./assets/uc team/Nilesh.jpeg">
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-gray-900">Shri Nilesh Gupta</h2>
+              <h3 class="text-gray-500 mb-3">Dashboard Developer</h3>
+              <p class="mb-4">.</p>
+              <span class="inline-flex">
+                <a href="https://facebook.com" class="text-gray-500">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a href="https://twitter.com" class="ml-3 text-gray-500">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="https://instagram.com" class="ml-3 text-gray-500">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                  </svg>
+                </a>
+                <a href="https://linkedin.com" class="ml-3 text-gray-500">
+                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="0" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <path stroke="none"
+                      d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 lg:w-1/2">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-49 h-48 object-cover object-center sm:mb-0 mb-4"
+              src="./assets/uc team/prince.jpeg">
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-gray-900">Shri Prince Tripathi</h2>
+              <h3 class="text-gray-500 mb-3">Dashboard Developer</h3>
+              <p class="mb-4">.</p>
+              <span class="inline-flex">
+                <a href="https://facebook.com" class="text-gray-500">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a href="https://twitter.com" class="ml-3 text-gray-500">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="https://instagram.com" class="ml-3 text-gray-500">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                  </svg>
+                </a>
+                <a href="https://linkedin.com" class="ml-3 text-gray-500">
+                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="0" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <path stroke="none"
+                      d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 lg:w-1/2">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-49 h-48 object-cover object-center sm:mb-0 mb-4"
+              src="./assets/uc team/gaurav.jpg">
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-gray-900">Shri Gaurav Wagh</h2>
+              <h3 class="text-gray-500 mb-3">Dashboard Developer</h3>
+              <p class="mb-4">.</p>
+              <span class="inline-flex">
+                <a href="https://facebook.com" class="text-gray-500">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a href="https://twitter.com" class="ml-3 text-gray-500">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                    </path>
+                  </svg>
+                </a>
+
+                <a href="https://instagram.com" class="ml-3 text-gray-500">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                  </svg>
+                </a>
+                <a href="https://linkedin.com" class="ml-3 text-gray-500">
+                  <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="0" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+                    <path stroke="none"
+                      d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+  </div>
+  </section>
+  </div>
+  <!-- Team Ends here -->
+
+
+  <!-- Vistor Counter from here -->
+  
+  <div id="sfczt3m4lp193ttpzc4kfuqccwqjzz92a79" class="text-3xl font-medium title-font text-gray-900 mb-6 text-center mt-5">
+
+    <script type="text/javascript" src="https://counter7.stat.ovh/private/counter.js?c=zt3m4lp193ttpzc4kfuqccwqjzz92a79&down=async"></script>
+      <noscript><a href="https://www.freecounterstat.com" title="website counter"><img src="https://counter7.stat.ovh/private/freecounterstat.php?c=zt3m4lp193ttpzc4kfuqccwqjzz92a79" border="0"
+        title="website counter" alt="website counter"></a></noscript>
+
+  <!-- Visitor counter till here -->
+ </div>
+
+  <!-- Footer -->
+  <footer class="text-gray-600 body-font">
+
+    <div class="bg-indigo-300">
+      <div class="max-w-screen-2xl px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <img src="./assets/Header/uclogo.png" class="w-12 h-15  p-2  rounded-full">
+          <span class="ml-3 text-xl">UCCC</span>
+        </a>
+        <p class="text-sm text-black-500 sm:ml-6 sm:mt-0 mt-4 font-bold">© 2021-22 Unified Command and Control Centre,
+          <a rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">Mumbai Division - WR</a>
+        </p>
+       &nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://facebook.com" class="text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6"
+              v&nbsp; iewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://twitter.com" class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6"
+              v&nbsp; iewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+              </path>
+            </svg>
+          </a>
+          <a href="https://instagram.com" class="ml-3 text-gray-500">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a href="https://linkedin.com" class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="0" class="w-6 h-6" v&nbsp; iewBox="0 0 24 24">
+              <path stroke="none"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+       
+      </div>
+    </div>
+
+
+  </footer>
+  <!-- Footer Ends here -->
+
+  <div class="fixed bottom-0 right-0 w-16 h-16 mr-12 mb-8 cursor-pointer">
+    <a href="#top">
+      <img src="./assets/Icons/up-arrow.svg">
+    </a>
+
+  </div>
+
+</body>
+
+</html>
